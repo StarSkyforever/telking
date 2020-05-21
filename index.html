@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+    <link rel="stylesheet" href="./css/slider.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-box">
+            <div class="logo">
+                <img src="image/logo.png">
+            </div>
+            <div class="logout">
+                <img class="icon" src="image/设 置.png">
+                <img class="icon" src="image/铃声.png">
+                <img src="image/log out.png">
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="container">
+            <div class="top">
+                <div class="top-left">
+                    <div class="title">Audience Overview</div>
+                    <span class="txt">Roservile,CA</span>
+                </div>
+                <div class="nav">
+                    <div><a href="#">DASHBOARD</a></div>
+                    <div><a href="#">PROJECTS</a></div>
+                    <div><a href="#">CALENDAR</a></div>
+                    <div><a href="#">MAILBOX</a></div>
+                    <div><a href="#">SETTING</a></div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="center-top">
+                    <div id="wrapper">
+                        <div class="slider_container">
+                            <!-- 图片区域 -->
+                            <ul class="imgList">
+                                <li id="one"><img src="./image/slider1.jpg" alt=""></li>
+                                <li id="two"><img src="./image/slider2.jpg" alt=""></li>
+                                <li><img src="./image/slider3.jpg" alt=""></li>
+                                <li><img src="./image/slider4.jpg" alt=""></li>
+                                <li><img src="./image/slider5.jpeg" alt=""></li>
+                            </ul>
+                            <!-- 左右切换图标 -->
+                            <img src="./image/prev.png" class="pre">
+                            <img src="./image/next.png" class="next">
+                            <!-- 下方控制图片按钮 -->
+                            <ul class="dollList">
+                                <li class="sec">
+                                    <a href="#"></a>
+                                </li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="support">Support Requests</div>
+                            <div class="btn"><a href="#">View All</a></div>
+                        </div>
+                        <div class="card-content">
+                            <div id="card-title">
+                                <h3>TIME</h3>
+                                <h3 id="second_title">USER NAME</h3>
+                                <h3>STATUS</h3>
+                            </div>
+                            <div class="data">
+                                <div id="data1">
+                                    <p>9:45pm</p>
+                                    <p id="second_data1">info@design.com</p>
+                                    <div class="solved"><a href="#">Solved</a></div>
+                                </div>
+                                <div id="data1">
+                                    <p>9:45pm</p>
+                                    <p id="second_data1">info@design.com</p>
+                                    <div class="solved"><a href="#">Solved</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-center">
+                    <div id="lineChart"></div>
+                </div>
+                <div class="center-bottom">
+                    <div class="pie">
+                        <div id="pie"></div>
+                    </div>
+                    <div class="bar">
+                        <div id="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div id="footer">
+            <ul id="footercontent">
+                <li id="footer_logo"><img src="image/logo.png"></li>
+                <li>
+                    <ul>
+                        <li>NEWS</li>
+                        <li>CHANNELS</li>
+                        <li>OVERVIEW</li>
+                        <li>TIMELINE</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>SPORT</li>
+                        <li>CULTURE</li>
+                        <li>NATURE</li>
+                        <li>MUSIC</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>WEATHER</li>
+                        <li>AUTOS</li>
+                        <li>LOCAL</li>
+                        <li>SHOP</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>FUTURE</li>
+                        <li>FOOD</li>
+                        <li>EARTH</li>
+                        <li>TV</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>TRAVEL</li>
+                        <li>RADIO</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="./js/moveline.js"></script>
+    <script src="./js/jquery.easing.js"></script>
+    <script src="./js/index_slider.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        $('.nav').moveline({
+            color: '#EC378F',
+            position: 'inner',
+            click: function(ret) {
+                ret.ele.addClass('active').siblings().removeClass('active');
+                showMessage('点击的是第' + ret.index + '个li,当前已经被设置成active的状态');
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
